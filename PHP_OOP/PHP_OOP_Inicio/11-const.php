@@ -33,6 +33,10 @@ class MenuRestaurant {
 class Bebida extends MenuRestaurant {
     public $medida;
 
+    //Definir constantes
+    const CON_ALCOHOL = 1;
+    const SIN_ALCOHOL = 0;
+
     public function __construct( $nombre, $precio, $medida ) { 
         parent::__construct( $nombre, $precio  );
         $this->medida = $medida;
@@ -46,3 +50,5 @@ class Bebida extends MenuRestaurant {
         return $this->medida;
     }
 }
+
+echo Bebida::CON_ALCOHOL;

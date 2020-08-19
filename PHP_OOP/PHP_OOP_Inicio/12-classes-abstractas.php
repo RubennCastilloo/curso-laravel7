@@ -1,6 +1,6 @@
 <?php include 'includes/header.php';
 
-class MenuRestaurant { 
+abstract class MenuRestaurant { 
     public $nombre; 
     protected $precio;
 
@@ -49,3 +49,10 @@ class Postre extends MenuRestaurant {
         return $this->peso;
     }
 }
+
+// $menu = new MenuRestaurant('Nuevo elemento en el menu', 100);
+// var_dump($menu);
+
+
+$postre = new Postre('Pastel de Zanahoria', 100, '300g');
+var_dump($postre);
